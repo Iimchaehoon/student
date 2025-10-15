@@ -23,9 +23,9 @@ export function Layout() {
     <div>
       <div className="navbar">
         <div className="container navinner">
-          <div className="brand"><span className="brand-badge">AI</span> 학생 AI 웹</div>
+          <Link to="/" className="brand" style={{ textDecoration: 'none' }}><span className="brand-badge">AI</span> 학생 AI 웹</Link>
           <nav className="navlinks">
-            <Link to="/">계기판</Link>
+            <Link to="/">대시보드</Link>
             <Link to="/login">로그인</Link>
             <Link to="/attendance">출석</Link>
             <Link to="/grades">성적</Link>

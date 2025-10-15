@@ -27,8 +27,8 @@ export function Dashboard() {
             <h1>오늘의 AI 제안</h1>
             <p>{isParent ? '학생의 이번 주 학습 요약이에요. 자세한 내용은 요약 수준으로만 제공돼요.' : '이번 주 잘하고 있어요! 수학은 문제풀이 시간을 조금 더 가져볼까요?'}</p>
             <div style={{ display: 'flex', gap: 10 }}>
-              <a className="cta" href="/grades">성적 보기</a>
-              <a className="cta secondary" href="/attendance">출석 확인</a>
+              <a className="cta" href="/student/grades">성적 보기</a>
+              <a className="cta secondary" href="/student/attendance">출석 확인</a>
             </div>
           </div>
           <div className="hero-card">
