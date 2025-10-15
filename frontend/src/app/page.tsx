@@ -6,6 +6,11 @@ export default function Home() {
         <h2 className="font-medium mb-2">Today's AI Suggestion</h2>
         <p className="text-sm text-gray-700 dark:text-gray-300">You're doing great this week!</p>
       </div>
+      <nav className="mt-4 flex gap-3 text-sm">
+        <a className="underline" href="/login">Login</a>
+        <a className="underline" href="/attendance">Attendance</a>
+        <a className="underline" href="/grades">Grades</a>
+      </nav>
     </main>
   )
 }
