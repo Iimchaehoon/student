@@ -2,7 +2,7 @@
   "name": "student-ai-web",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://<your-github-username>.github.io/student-ai-web",
+  "homepage": "https://limchaehoon.github.io/student",
   "type": "module",
   "scripts": {
     "dev": "vite",
