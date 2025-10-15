@@ -17,9 +17,20 @@ export function MiniTrends() {
   return (
     <div className="card">
       <h3>학습/생활 트렌드</h3>
-      <TrendBar label="수학 향상" value={82} color="var(--blue)" />
-      <TrendBar label="월요일 지각 감소" value={40} color="var(--pink)" />
-      <TrendBar label="루틴 준수" value={70} color="var(--brand-2)" />
+      <div className="bars">
+        <div>
+          <div className="bar-label"><span>수학 향상</span><span>82%</span></div>
+          <div className="bar"><span style={{ width: '82%' }} /></div>
+        </div>
+        <div>
+          <div className="bar-label"><span>월요일 지각 감소</span><span>40%</span></div>
+          <div className="bar"><span style={{ width: '40%', background: 'linear-gradient(90deg, var(--pink), #ffb3c7)' }} /></div>
+        </div>
+        <div>
+          <div className="bar-label"><span>루틴 준수</span><span>70%</span></div>
+          <div className="bar"><span style={{ width: '70%', background: 'linear-gradient(90deg, var(--brand-2), #6ef3c5)' }} /></div>
+        </div>
+      </div>
     </div>
   )
 }

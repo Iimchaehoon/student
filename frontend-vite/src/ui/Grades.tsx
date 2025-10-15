@@ -7,7 +7,8 @@ export function Grades() {
   ]
   const [term, setTerm] = React.useState<'전체'|'중간'|'기말'|'모의'>('전체')
   const [form, setForm] = React.useState({ subject: '', term: '중간', score: '' })
-  const filtered = term === '전체' ? demo : demo.filter(g => g.term === term)
+  const [rows, setRows] = React.useState(demo)
+  const filtered = term === '전체' ? rows : rows.filter(g => g.term === term)
   return (
     <div>
       <div className="subheader container">
@@ -29,7 +30,7 @@ export function Grades() {
         </tbody>
       </table>
       </div>
-      <form className="card-form" onSubmit={(e)=>{e.preventDefault(); alert('데모: 성적 입력이 저장되었습니다.');}}>
+      <form className="card-form" onSubmit={(e)=>{e.preventDefault(); if(!form.subject||!form.score) return; setRows(prev=>[{ subject: form.subject, term: form.term as any, score: Number(form.score), date: new Date().toISOString().slice(0,10) }, ...prev]); setForm({ subject: '', term: '중간', score: '' });}}>
         <h3 style={{ marginTop: 0 }}>성적 입력(데모)</h3>
         <div className="row" style={{ marginBottom: 10 }}>
           <input className="input" placeholder="과목" value={form.subject} onChange={e=>setForm(f=>({ ...f, subject: e.target.value }))} />
